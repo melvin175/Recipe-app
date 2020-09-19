@@ -10,6 +10,7 @@ const searchBtn = document.getElementById("search");
 getRandomMeal();
 fetchFavMeals();
 
+//to get random meals
 async function getRandomMeal() {
     const resp = await fetch(
         "https://www.themealdb.com/api/json/v1/1/random.php"
@@ -30,7 +31,7 @@ async function getMealById(id) {
 
     return meal;
 }
-
+//search meals by term id
 async function getMealsBySearch(term) {
     const resp = await fetch(
         "https://www.themealdb.com/api/json/v1/1/search.php?s=" + term
@@ -90,6 +91,7 @@ function addMeal(mealData, random = false) {
     mealsEl.appendChild(meal);
 }
 
+//adds meals with id 
 function addMealLS(mealId) {
     const mealIds = getMealsLS();
 
@@ -110,7 +112,7 @@ function getMealsLS() {
 
     return mealIds === null ? [] : mealIds;
 }
-
+//fetching favorite meals
 async function fetchFavMeals() {
     // clean the container
     favoriteContainer.innerHTML = "";
@@ -124,7 +126,7 @@ async function fetchFavMeals() {
         addMealFav(meal);
     }
 }
-
+//adding favorite meals
 function addMealFav(mealData) {
     const favMeal = document.createElement("li");
 
@@ -150,7 +152,7 @@ function addMealFav(mealData) {
 
     favoriteContainer.appendChild(favMeal);
 }
-
+//showung meal infos
 function showMealInfo(mealData) {
     // clean it up
     mealInfoEl.innerHTML = "";
