@@ -21,18 +21,27 @@ img {
 }
 
 .mobile-container {
-    background-color: #fff;
+    background-color: rgb(207, 201, 241);
     box-shadow: 0 0 10px 2px #3333331a;
-    border-radius: 3px;
+    border-radius: 9px;
     overflow: hidden;
     width: 400px;
+
 }
+.mobile-container h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.5rem;
+}
+
 
 header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding-bottom: 1rem;
+    margin-left: 2rem;
 }
 
 header input {
@@ -52,7 +61,7 @@ header button {
 }
 
 .fav-container {
-    background-color: rgb(243, 225, 255);
+    background-color: rgb(219, 245, 248);
     padding: 0.25rem 1rem;
     text-align: center;
 }
@@ -134,6 +143,7 @@ header button {
 
 .meal-body {
     display: flex;
+    background-color: seashell;
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
